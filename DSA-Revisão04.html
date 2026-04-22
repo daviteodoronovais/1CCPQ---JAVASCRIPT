@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão 04 DSA</title>
+    <script>
+
+        let dados = [10,20,30,40,50];
+        let procurado = 30;
+        let posicao = -1
+        for(let i = 0; i < dados.length; i++)
+        {
+            if ( dados[i] === procurado)
+            {
+                posicao = i;
+                break;
+            }
+        }
+        if (posicao == -1)
+        {
+        console.log ("Valor ", procurado, " não encrotrado no vetor")
+        }
+        else 
+        console.log("Valor ", procurado, " encontrado na posição ", posicao);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

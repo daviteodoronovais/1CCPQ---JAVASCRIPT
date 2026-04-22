@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão 05 DSA</title>
+    <script>
+
+        let dados = [2, 5, 2, 7, 2, 9];
+        let alvo = 2;
+        let contador = 0;
+        for (let i = 0; i < dados.length; i++)
+        {
+            if (dados[i] === alvo) 
+            {
+                contador++;
+            }
+        }
+        if (contador == 0)
+        {
+        console.log ("Valor ", alvo, " não foi encontrado no vetor")
+        }
+        else
+            if (contador == 1)
+            {
+              console.log("Valor ", alvo, " foi encontrado 1 vez");  
+            }
+            else
+            console.log("Valor ", alvo, " foi encontrado ", contador, " vezes");
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -48,6 +48,28 @@
         document.getElementById("saida").innerHTML = "Nome adicionado!";
     }
 
+    function mostrar()
+    {
+        let resultado = "";
+        let atual = inicio;
+
+        while (atual !== -1)
+        {
+            resultado += valores[atual] + " ---> ";
+            atual = proximo[atual];
+        }
+
+        if (inicio === -1)
+        {
+            resultado = "Lista vazia";
+        }
+        else
+        {
+        resultado += "null";
+        }
+        document.getElementById("saida").innerHTML = resultado;
+    }
+
     </script>
 
 </body>

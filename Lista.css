@@ -1,0 +1,24 @@
+body
+{
+    font-family: Arial;
+    margin: 30px;
+}
+button
+{
+    width: 150px;
+}
+input
+{
+    width: 450px;
+ }
+input, button
+{
+    margin: 5px;
+    padding: 8px;
+}
+#saida 
+{
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+}

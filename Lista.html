@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Encadeada Simples</title>
+    <link rel="stylesheet" href="lista.css">
+
 </head>
 <body>
     
     <h1>Lista Encadeada (Versão Simples)</h1>
 
     <input type="text" id="nome" placeholder="Digite um nome">
-    <button onclick="adicionar()">Adicionar</button>
+    <br>
+    <button onclick="adicionarFim()">Adicionar no Fim</button>
+    <button onclick="adicionarInicio()">Adicionar no Início</button>
+    <button onclick="removerInicio()">Remover Início</button>
+    <br>
+    <button onclick="contar()">Contar elementos</button>
+    <button onclick="buscar()">Buscar nome</button>
     <button onclick="mostrar()">Mostrar Lista</button>
 
     <div id="saida"></div>
@@ -23,7 +31,8 @@
     let inicio = -1;
     let ultimo = -1;
 
-    function adicionar()
+    
+    function adicionarFim()
     {
         let nome = document.getElementById("nome").value;
         if (nome === "")
@@ -45,7 +54,42 @@
             ultimo = novoIndice;
         }
         document.getElementById("nome").value = "";
-        document.getElementById("saida").innerHTML = "Nome adicionado!";
+        mostrar();
+    }
+
+    function adicionarInicio()
+    {
+        let nome = document.getElementById("nome").value;
+        if (nome === "")
+        {
+            alert("Digite um nome");
+            return;
+        }
+        let novoIndice = valores.length;
+        valores.push(nome);
+        proximo.push(inicio);
+        inicio = novoIndice
+        if (ultimo === -1)
+        {
+            ultimo = novoIndice;
+        } 
+        mostrar();
+    }
+
+    function removerInicio()
+    {
+        if (inicio === -1)
+        {
+            alert("Lista vazia");
+            return;
+        } 
+        inicio = proximo[inicio];
+
+        if(inicio === -1)
+        {
+        ultimo = -1;
+        }
+        mostrar();
     }
 
     function mostrar()
